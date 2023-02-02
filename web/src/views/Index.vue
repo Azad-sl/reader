@@ -26,7 +26,7 @@
           }}</span>
         </div>
         <div class="navigation-sub-title">
-          清风不识字，何故乱翻书
+          殖殖其庭，有觉其楹<br>哙哙其正，哕哕其冥
         </div>
         <div class="search-wrapper">
           <el-input
@@ -410,17 +410,33 @@
               type="info"
               :effect="isNight ? 'dark' : 'light'"
               class="setting-btn"
-              @click="showMPCode"
+              @click="zhuye"
             >
-              关注公众号【假装大佬】
+              个人主页
             </el-tag>
             <el-tag
               type="info"
               :effect="isNight ? 'dark' : 'light'"
               class="setting-btn"
-              @click="joinTGChannel"
+              @click="boke"
             >
-              加入TG频道【假装大佬】
+              个人博客
+            </el-tag>
+            <el-tag
+              type="info"
+              :effect="isNight ? 'dark' : 'light'"
+              class="setting-btn"
+              @click="yunpan"
+            >
+              个人云盘
+            </el-tag>
+            <el-tag
+              type="info"
+              :effect="isNight ? 'dark' : 'light'"
+              class="setting-btn"
+              @click="daohan"
+            >
+              个人导航
             </el-tag>
           </div>
         </div>
@@ -2745,11 +2761,17 @@ export default {
     showUserManageDialog() {
       eventBus.$emit("showUserManageDialog");
     },
-    showMPCode() {
-      eventBus.$emit("showMPCodeDialog");
+    zhuye() {
+      window.open("http://www.azad.asia/", "_target");
     },
-    joinTGChannel() {
-      window.open("https://t.me/facker_channel", "_target");
+    boke() {
+      window.open("https://blog.azad.asia/", "_target");
+    },
+    yunpan() {
+      window.open("http://www.azad.asia:5244/", "_target");
+    },
+    daohan() {
+      window.open("https://ss.azad.asia/", "_target");
     },
     ensureLoadBookCover() {
       // 手动触发滚动事件，显示书籍封面图片
